@@ -51,7 +51,7 @@ body {
 }
 
 .logo img {
-    width: 4rem;
+    width: 5rem;
     height: 6rem;
 }
 
@@ -68,7 +68,7 @@ body {
 
 .hero-container,
 .form-container span {
-    font-size: 1.5rem;
+    font-size: 1.4rem;
     font-weight: bold;
 }
 
@@ -78,4 +78,78 @@ body {
 
 .hero-container p+p {
     margin-top: 1rem;
+}
+
+.form-container {
+    background-color: #f9fafb;
+
+}
+
+.form-main {
+    background-color: white;
+    border: 1px solid #fafafa;
+    box-shadow: 2px 5px 5px lightgray;
+    padding: 1rem 5rem;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    padding-top: 2rem;
+}
+
+section {
+    display: flex;
+}
+
+.form-pair {
+    display: flex;
+    flex-direction: column;
+    margin-right: auto;
+    margin-bottom: 1rem;
+}
+
+label {
+    font-size: .75rem;
+    letter-spacing: 0.1rem;
+}
+
+input[type=text],
+input[type=email],
+input[type=tel],
+input[type=password] {
+    font-size: 1rem;
+    padding: 5px;
+    width: 30ch;
+    border: none;
+    border: 2px solid #E5E7EB;
+    border-radius: 4px;
+    transition: 0.5s;
+}
+
+input[type=text]:focus,
+input[type=email]:focus,
+input[type=tel]:focus,
+input[type=password]:focus {
+    outline: none;
+    border: 2px solid #7c98e8;
+    box-shadow: 2px 2px 5px #7c98e8;
+}
+
+input[type=text]:valid,
+input[type=email]:valid,
+input[type=tel]:valid,
+input[type=password]:valid {
+    outline: none;
+    border: 2px solid #73961d;
+    box-shadow: 2px 2px 5px #73961d;
+}
+
+input[type=text]:invalid,
+input[type=email]:invalid,
+input[type=tel]:invalid,
+input[type=password]:invalid {
+    outline: none;
+    border: 2px solid #bd2727;
+    box-shadow: 2px 2px 5px #bd2727;
 }

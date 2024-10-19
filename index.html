@@ -40,61 +40,78 @@
                 </div>
                 <div class="form-main">
                     <span>Let's do this!</span>
-                    <form action="" method="post">
+                    <form id="odin-form" action="" method="GET">
                         <section class="first-last-name">
-                            <div class="form-row">
-                                <label for="first-name">FIRST NAME</label>
+                            <div class="form-pair">
+                                <label for="first-name"
+                                    >FIRST NAME (required)</label
+                                >
                                 <input
                                     id="first-name"
                                     name="first-name"
                                     type="text"
+                                    required
                                 />
                             </div>
-                            <div class="form-row">
-                                <label for="last-name">LAST NAME</label>
+                            <div class="form-pair">
+                                <label for="last-name"
+                                    >LAST NAME (required)</label
+                                >
                                 <input
                                     id="last-name"
                                     name="last-name"
                                     type="text"
+                                    required
                                 />
                             </div>
                         </section>
 
                         <section class="email-phone">
-                            <div class="form-row">
-                                <label for="email">EMAIL</label>
-                                <input id="email" name="email" type="email" />
+                            <div class="form-pair">
+                                <label for="email">EMAIL (required)</label>
+                                <input
+                                    id="email"
+                                    name="email"
+                                    type="email"
+                                    required
+                                />
                             </div>
-                            <div class="form-row">
-                                <label for="phone">PHONE NUMBER</label>
+                            <div class="form-pair">
+                                <label for="phone"
+                                    >PHONE NUMBER (optional)</label
+                                >
                                 <input id="phone" name="phone" type="tel" />
                             </div>
                         </section>
 
                         <section class="password">
-                            <div class="form-row">
-                                <label for="password">PASSWORD</label>
+                            <div class="form-pair">
+                                <label for="password"
+                                    >PASSWORD (required)</label
+                                >
                                 <input
                                     id="password"
                                     name="password"
                                     type="password"
+                                    required
                                 />
                             </div>
-                            <div class="form-row">
-                                <label for="password-conform"
+                            <div class="form-pair">
+                                <label for="password-confirm"
                                     >CONFIRM PASSWORD</label
                                 >
                                 <input
                                     id="password-conform"
                                     name="password-conform"
                                     type="password"
+                                    required
                                 />
                             </div>
                         </section>
                     </form>
-                    <button type="submit">Create Account</button>
-                    <p>Already have an account? <a href="">Log in</a></p>
                 </div>
+                <button form="odin-form" type="submit">Create Account</button>
+                <p>Already have an account? <a href="">Log in</a></p>
             </div>
         </div>
     </body>

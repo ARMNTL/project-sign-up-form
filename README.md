@@ -141,7 +141,7 @@ body {
 }
 
 .logo img {
-    width: 4rem;
+    width: 5rem;
     height: 6rem;
 }
 ```
@@ -191,36 +191,36 @@ body {
 ```html
 <div class="form-main">
     <span>Let's do this!</span>
-    <form action="" method="post">
+    <form id="odin-form" action="" method="post">
         <section class="first-last-name">
-            <div class="form-row">
+            <div class="form-pair">
                 <label for="first-name">FIRST NAME</label>
                 <input id="first-name" name="first-name" type="text" />
             </div>
-            <div class="form-row">
+            <div class="form-pair">
                 <label for="last-name">LAST NAME</label>
                 <input id="last-name" name="last-name" type="text" />
             </div>
         </section>
 
         <section class="email-phone">
-            <div class="form-row">
+            <div class="form-pair">
                 <label for="email">EMAIL</label>
                 <input id="email" name="email" type="email" />
             </div>
-            <div class="form-row">
+            <div class="form-pair">
                 <label for="phone">PHONE NUMBER</label>
                 <input id="phone" name="phone" type="tel" />
             </div>
         </section>
 
         <section class="password">
-            <div class="form-row">
+            <div class="form-pair">
                 <label for="password">PASSWORD</label>
                 <input id="password" name="password" type="password" />
             </div>
-            <div class="form-row">
-                <label for="password-conform">CONFIRM PASSWORD</label>
+            <div class="form-pair">
+                <label for="password-confirm">CONFIRM PASSWORD</label>
                 <input
                     id="password-conform"
                     name="password-conform"
@@ -229,7 +229,92 @@ body {
             </div>
         </section>
     </form>
-    <button type="submit">Create Account</button>
+    <button form="odin-form" type="submit">Create Account</button>
     <p>Already have an account? <a href="">Log in</a></p>
 </div>
+```
+
+14. Background color and shadows.
+
+```css
+.form-container {
+    background-color: #f9fafb;
+}
+
+.form-main {
+    background-color: white;
+    border: 1px solid #fafafa;
+    box-shadow: 2px 5px 5px lightgray;
+    padding: 1rem 5rem;
+}
+```
+
+15. Flexing form, sections, label input pairs.
+
+```css
+form {
+    display: flex;
+    flex-direction: column;
+    padding-top: 2rem;
+}
+
+section {
+    display: flex;
+}
+
+.form-pair {
+    display: flex;
+    flex-direction: column;
+    margin-right: auto;
+    margin-bottom: 1rem;
+}
+```
+
+16. Styling labels and inputs.
+
+```css
+label {
+    font-size: 0.75rem;
+    letter-spacing: 0.1rem;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+input[type="password"] {
+    font-size: 1rem;
+    padding: 5px;
+    width: 30ch;
+    border: none;
+    border: 2px solid #e5e7eb;
+    border-radius: 4px;
+    transition: 0.5s;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="tel"]:focus,
+input[type="password"]:focus {
+    outline: none;
+    border: 2px solid #7c98e8;
+    box-shadow: 2px 2px 5px #7c98e8;
+}
+
+input[type="text"]:valid,
+input[type="email"]:valid,
+input[type="tel"]:valid,
+input[type="password"]:valid {
+    outline: none;
+    border: 2px solid #73961d;
+    box-shadow: 2px 2px 5px #73961d;
+}
+
+input[type="text"]:invalid,
+input[type="email"]:invalid,
+input[type="tel"]:invalid,
+input[type="password"]:invalid {
+    outline: none;
+    border: 2px solid #bd2727;
+    box-shadow: 2px 2px 5px #bd2727;
+}
 ```
