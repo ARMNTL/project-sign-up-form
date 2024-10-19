@@ -318,3 +318,33 @@ input[type="password"]:invalid {
     box-shadow: 2px 2px 5px #bd2727;
 }
 ```
+
+17. Styling button.
+
+```css
+button {
+    color: white;
+    background-color: #596d48;
+    padding: 1rem 2rem;
+    font-size: 1rem;
+    font-weight: bold;
+    letter-spacing: 0.1rem;
+    border: 1px solid #596d48;
+    border-radius: 8px;
+    box-shadow: 2px 2px 5px grey;
+    margin: 2rem 5rem;
+}
+
+button:hover {
+    background-color: #73961d;
+}
+
+button + p {
+    margin-left: 5rem;
+}
+
+p > a {
+    text-decoration: none;
+    color: #596d48;
+}
+```
